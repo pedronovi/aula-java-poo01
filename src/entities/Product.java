@@ -1,7 +1,5 @@
 package entities;
 
-import javax.swing.plaf.basic.BasicDesktopIconUI;
-
 public class Product {
 
     public String name;
