@@ -2,21 +2,18 @@ package entities;
 
 public class Product {
 
+    // Atributos
     public String name;
     public double price;
     public int quantity;
 
 
 
-    public String toString(){
+    // Construtores
+    public Product(){
 
-        return name
-                + ", $ "
-                + String.format("%.2f", price)
-                + ", "
-                + quantity + " units, Total: $ "
-                + String.format("%.2f%n", totalValueInStock());
     }
+
 
     public Product(String name, double price, int quantity){
 
@@ -30,6 +27,32 @@ public class Product {
         this.price = price;
     }
 
+    // Métodos GET / SET
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setPrice(double price){
+        this.price = price;
+    }
+
+    public double getPrice(){
+        return price;
+    }
+
+    public int getQuantity(){
+        return quantity;
+    }
+
+
+
+
+
+    // Functions
     public double totalValueInStock(){
         return price * quantity;
     }
@@ -42,4 +65,13 @@ public class Product {
         this.quantity -= quantity;
     }
 
+    public String toString(){
+
+        return name
+                + ", $ "
+                + String.format("%.2f", price)
+                + ", "
+                + quantity + " units, Total: $ "
+                + String.format("%.2f%n", totalValueInStock());
+    }
 }
