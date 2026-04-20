@@ -39,7 +39,7 @@ public class applications {
 
         int quantityremove = sc.nextInt();
         product.removeProducts(quantityremove);
-
+        System.out.println();
         System.out.println();
         System.out.println("Updated data: " + product);
 
